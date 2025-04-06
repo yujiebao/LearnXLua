@@ -1,0 +1,39 @@
+ManifestFileVersion: 0
+CRC: 416233456
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 3dd5d0f70fbd2a64f8b6dc3bd3ece349
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 67b43a307c9bcb23339cbf6168e28c89
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+- Class: 135
+  Script: {instanceID: 0}
+- Class: 136
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/AssetB/Green.mat
+- Assets/AssetB/Capsule.prefab
+- Assets/AssetB/Cube.prefab
+- Assets/AssetB/Sphere.prefab
+Dependencies:
+- "F:/unity/TangCourse/\u70ED\u66F4\u65B0/Lua\u70ED\u66F4\u65B0/XLua/LeanXlua/AssetBundles/StandaloneWindows/materials"

@@ -1,0 +1,14 @@
+ManifestFileVersion: 0
+CRC: 2912939060
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: prefabs
+      Dependencies:
+        Dependency_0: materials
+    Info_1:
+      Name: materials
+      Dependencies: {}
+    Info_2:
+      Name: lua
+      Dependencies: {}
