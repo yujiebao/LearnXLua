@@ -47,3 +47,19 @@ testDic2 = {
     [false] = true,
     ['123'] = false
 }
+
+testClass = 
+{
+    testInt = 2,
+    testBool = true,
+    testString = "test",
+    testFloat = 1.0,
+    -- testList = {1,2,3,4,5},
+    testfunc = function ()
+        print("testClass.testfunc")
+    end,
+    -- testinClass =
+    -- {
+    --     testinInt = 5
+    -- }
+}
