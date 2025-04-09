@@ -1,7 +1,8 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
-using Unity.Android.Types;
 using UnityEngine;
+using UnityEngine.Events;
+using XLua;
 
 #region 第一次课 调用类函数
 public class Test{
@@ -126,12 +127,108 @@ public class Lesson6
     
 }
 #endregion
+
+#region 第七次课 委托和事件
+[XLua.LuaCallCSharp]
+public class Lesson7
+{
+    public UnityAction del;
+    // public UnityEvent eventAction;
+    public event UnityAction eventAction;
+
+    public void DoEvent()    //事件只能内部调用
+    {
+        eventAction?.Invoke();
+    }
+
+    public void ClearEvent()
+    {
+        eventAction = null;
+    }
+}
+#endregion
+
+#region 第八次课 二维数组的遍历
+public class Lesson8
+{
+    public int[,] array = new int[3,4]{
+        {1,2,3,4},
+        {5,6,7,8},
+        {9,10,11,12}
+    };
+}
+#endregion
+
+#region 第九次课 拓展方法
+[XLua.LuaCallCSharp]
+public static class Lesson9
+{
+    public static bool IsNull(this UnityEngine.Object obj)
+    {
+        return obj == null;
+    }
+}
+#endregion
+
+#region 第十次课 系统类型加特性
+public static class Lesson10
+{
+    [CSharpCallLua]   //批量添加特性
+    public static List<Type> csharpCallLuaList = new List<Type>()
+    {
+         typeof(UnityAction<float>),
+    };
+
+    [LuaCallCSharp]
+    public static List<Type> luaCallCSharpList = new List<Type>()
+    {
+        typeof(UnityAction<float>),
+    };
+}
+#endregion
+#region 第十二次课  调用泛型方法
+public class Lesson12
+{
+    public interface ITest
+    {
+    }
+    public class TestFather
+    {
+        
+    }
+
+    public class TestSon : TestFather,ITest
+    {
+
+    }
+
+    public void TestFun<T>(T a,T b) where T : TestFather
+    {
+        Debug.Log("有参数的约束泛型方法");
+    }
+
+    public void TestFun2<T>(T a,T b) 
+    {
+        Debug.Log("有参数的无约束泛型方法");
+    }
+
+    public void TestFun3<T>() where T : TestFather
+    {
+        Debug.Log("无参数的约束泛型方法");
+    }
+
+    public void TestFun4<T>(T a) where T : ITest
+    {
+        Debug.Log("有参数的有接口约束泛型方法");
+    }
+    
+}
+#endregion
 public class LuaCallCSharp : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame

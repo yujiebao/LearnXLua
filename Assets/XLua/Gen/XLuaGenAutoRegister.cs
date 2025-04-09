@@ -25,6 +25,12 @@ namespace XLua.CSObjectWrap
             translator.DelayWrapLoader(typeof(Tool), ToolWrap.__Register);
         
         
+            translator.DelayWrapLoader(typeof(Lesson7), Lesson7Wrap.__Register);
+        
+        
+            translator.DelayWrapLoader(typeof(Lesson9), Lesson9Wrap.__Register);
+        
+        
             translator.DelayWrapLoader(typeof(object), SystemObjectWrap.__Register);
         
         

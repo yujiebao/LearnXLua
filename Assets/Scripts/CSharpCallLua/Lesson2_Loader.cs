@@ -8,6 +8,7 @@ public class Lesson2_Loader : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         LuaEnv env = new LuaEnv();
 
         //XLua提供的一个重定向的方法
@@ -45,3 +46,10 @@ public class Lesson2_Loader : MonoBehaviour
         
     }
 }
+
+
+#region 补充
+// 1.默认的从Resources加载Lua文件的缺点:
+    // (1)打包后不能修改
+    // (2)后缀为.txt  每次都要手动修改 麻烦
+#endregion

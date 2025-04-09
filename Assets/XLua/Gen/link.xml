@@ -4,6 +4,8 @@
 
 	<assembly fullname="Assembly-CSharp">
 	    <type fullname="Tool" preserve="all"/>
+		<type fullname="Lesson7" preserve="all"/>
+		<type fullname="Lesson9" preserve="all"/>
 		<type fullname="Tutorial.BaseClass" preserve="all"/>
 		<type fullname="Tutorial.TestEnum" preserve="all"/>
 		<type fullname="Tutorial.DerivedClass" preserve="all"/>

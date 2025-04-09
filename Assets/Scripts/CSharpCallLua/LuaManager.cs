@@ -43,12 +43,7 @@ public class LuaManager :BaseManager<LuaManager>
         luaEnv.AddLoader(MyCustomABLoader);
     }
 
-    //Lua脚本会放在AB包中
-    //最终我们会通过AB包再加载其中的Lua脚本
-    //AB包中如果要加载本文 后缀还是有一定的限制 .lua不能被识别
-    //打包时 要把lua文件后缀改为txt
-
-
+ 
     /// <summary>
     /// 调用Lua语言
     /// </summary>
@@ -106,6 +101,11 @@ public class LuaManager :BaseManager<LuaManager>
         }
         return null;
     }
+
+    //Lua脚本会放在AB包中
+    //最终我们会通过AB包再加载其中的Lua脚本
+    //AB包中如果要加载本文 后缀还是有一定的限制 .lua不能被识别
+    //打包时 要把lua文件后缀改为txt
 
     //加载AB包中的Lua脚本
     //最终我们会通过加载AB包再加载其中的Lua脚本资源 来执行它
